@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Irina Kareva — Contralto</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+        <style>:root { --parchment: #F1EBDD; --parchment-2: #EAE2D1; --ink: #23271F; --ink-soft: #4A4F44; --pine: #3F5B4C; --brass: #A9853E; --rule: #CFC6B2; --maxw: 980px; } * { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; } body { background: var(--parchment); color: var(--ink); font-family: "Hanken Grotesk",-apple-system,system-ui,sans-serif; font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased; } .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; } .eyebrow { font-family: "Hanken Grotesk",sans-serif; font-size: .72rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--pine); } h1, h2, h3 { font-family: "Cormorant Garamond",Georgia,serif; font-weight: 500; letter-spacing: .01em; line-height: 1.08; } /* ---------- HERO ---------- */header.hero { padding: 104px 0 76px; } .hero .eyebrow { margin-bottom: 22px; } .hero h1 { font-size: clamp(3.4rem,9vw,6.4rem); font-weight: 500; line-height: .96; position: relative; display: inline-block; padding-bottom: 18px; } /* the single gilded "alto line" the name rests on */.hero h1::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: linear-gradient(90deg,var(--brass),rgba(169,141,62,.15)); animation: draw 1.4s .35s cubic-bezier(.2,.7,.2,1) forwards; } @keyframes draw{ to {  width: 100%; } } .hero .lede { font-family: "Cormorant Garamond",serif; font-size: clamp(1.5rem,3.2vw,2.1rem); line-height: 1.32; color: var(--ink); font-style: italic; font-weight: 400; max-width: 40ch; margin-top: 30px; } .hero .place { margin-top: 26px; color: var(--ink-soft); font-size: .95rem; letter-spacing: .02em; } /* ---------- SECTION SCAFFOLD ---------- */section { padding: 48px 0; border-top: 1px solid var(--rule); } .sec-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 28px; flex-wrap: wrap; } .sec-head h2 { font-size: clamp(2rem,4.5vw,2.9rem); } .sec-head .eyebrow { transform: translateY(-2px); } /* ---------- LISTEN ---------- */.track { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--rule); } a.track { color: inherit; text-decoration: none; } .track:first-of-type { border-top: 1px solid var(--rule); } .play { width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--pine); display: grid; place-items: center; color: var(--pine); flex: none; transition: background .25s ease,color .25s ease,transform .25s ease; cursor: pointer; } .play svg { width: 16px; height: 16px; } .track:hover .play { background: var(--pine); color: var(--parchment); transform: scale(1.04); } .track .meta .t { display: block; font-family: "Cormorant Garamond",serif; font-size: 1.45rem; line-height: 1.15; color: var(--ink); } .track .meta .s { display: block; font-size: .9rem; color: var(--ink-soft); margin-top: 3px; } .track .tag { font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--pine); border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px; white-space: nowrap; } .group-label { font-size: .72rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); margin: 34px 0 6px; } .group-label:first-child { margin-top: 0; } .note { margin-top: 30px; font-size: .9rem; color: var(--ink-soft); font-style: italic; font-family: "Cormorant Garamond",serif; font-size: 1.05rem; } /* ---------- ABOUT ---------- */.about-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(220px,290px); gap: 46px; align-items: start; } .about p { max-width: 62ch; margin-bottom: 0; color: var(--ink); font-size: 1.06rem; } .about p .lead { font-family: "Cormorant Garamond",serif; } .about-portrait { margin: 0; overflow: hidden; background: var(--parchment-2); } .about-portrait img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; } /* ---------- CONTACT ---------- */.contact-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; flex-wrap: wrap; } .contact-inner .big { font-family: "Cormorant Garamond",serif; font-size: clamp(1.8rem,4vw,2.6rem); line-height: 1.1; } a.mail { color: var(--pine); text-decoration: none; border-bottom: 1px solid var(--brass); padding-bottom: 2px; } a.mail:hover { color: var(--ink); } .contact-inner .sub { color: var(--ink-soft); font-size: .95rem; max-width: 30ch; } footer { padding: 40px 0 60px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: .85rem; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; } /* reveal */.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease,transform .7s ease; } .reveal.in { opacity: 1; transform: none; } @media (prefers-reduced-motion:reduce){ .reveal {  opacity: 1;  transform: none;  transition: none; }  .hero h1::after {  animation: none;  width: 100%; }  html {  scroll-behavior: auto; } } a:focus-visible, .play:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; } @media (max-width:700px){ .about-grid { grid-template-columns: 1fr; gap: 24px; } .about-portrait { order: -1; width: min(100%,360px); } } @media (max-width:560px){ .track {  grid-template-columns: auto 1fr;  gap: 16px; }  .track .tag {  grid-column: 2;  justify-self: start;  margin-top: -6px; } }</style>
+    </head>
+    <body>
+        <header class="hero">
+            <div class="wrap">
+                <div class="eyebrow">contrAlto &middot; Chamber Musician &middot; Boston</div>
+                <h1>Irina Kareva</h1>
+                <p class="lede">At home in small ensembles, where every voice is essential.</p>
+                <p class="place" data-pgc-edit="tagline">Renaissance &amp; Baroque &middot; Bach &middot; Precision-driven new music</p>
+            </div>
+        </header>
+        <section class="about reveal">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2>About</h2>
+                </div>
+                <div class="about-grid">
+                    <p>Irina Kareva is a Boston-based contralto and chamber musician with over twenty years of ensemble singing experience, ranging from quartet work and chamber to large symphonic ensembles, such as the Tanglewood Festival Chorus. Her repertoire centers on Renaissance and Baroque music, especially Bach, and extends to contemporary vocal ensemble work requiring precision, close listening, and flexibility of sound.</p>
+                    <figure class="about-portrait">
+                        <img src="bio-photo.jpg" alt="Irina Kareva singing in recital" width="1620" height="1704" loading="lazy">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="listen reveal">
+            <div class="wrap">
+                <div class="sec-head">
+                    <h2>Listen</h2>
+                </div>
+                <div class="group-label">Solo recordings</div>
+                <p class="note">Each recording opens on its original platform.</p>
+                <a class="track" href="https://www.youtube.com/@IrinaKareva-contralto" target="_blank" rel="noopener noreferrer" aria-label="Listen to Irina Kareva's solo recordings on YouTube"> <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17 17 7M9 7h8v8"/>
+                        </svg></span> <span class="meta"><span class="t">Irina Kareva — solo recordings</span><span class="s">Contralto repertoire &middot; YouTube channel</span></span> <span class="tag">YouTube ↗</span> </a>
+                <div class="group-label">Contemporary &middot; studio ensemble</div>
+                <a class="track" href="https://app.idagio.com/works/44544336" target="_blank" rel="noopener noreferrer" aria-label="Listen to Vox Futura on IDAGIO"> <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17 17 7M9 7h8v8"/>
+                        </svg></span> <span class="meta"><span class="t">L. Peter Deutsch — “N’fashot Tzadikim”</span><span class="s">Vox Futura &middot; Andrew Shenton, director &middot; 2021</span></span> <span class="tag">IDAGIO ↗</span> </a>
+                <a class="track" href="https://soundcloud.com/user-63485360/vigilando-for-satb-chorus-divisi-or-vocal-octet-unaccompanied" target="_blank" rel="noopener noreferrer" aria-label="Listen to Vigilando by Kareem Roustom on SoundCloud"> <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 17 17 7M9 7h8v8"/>
+                        </svg></span> <span class="meta"><span class="t">Kareem Roustom — “Vigilando”</span><span class="s">Vox Futura &middot; Andrew Shenton, director &middot; studio recording</span></span> <span class="tag">SoundCloud ↗</span> </a>
+            </div>
+        </section>
+        <section class="contact reveal">
+            <div class="wrap">
+                <div class="contact-inner">
+                    <div class="big">
+                        <a class="mail" href="mailto:irinakareva@gmail.com">Get in touch &rarr;</a>
+                    </div>
+                    <div class="sub">Available for chamber, professional choral, project-based, and solo engagements throughout New England.</div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;width:100%;max-width:var(--maxw)">
+                <span>Irina Kareva &middot; Contralto</span>
+                <span>Boston, MA</span>
+            </div>
+        </footer>
+        <script>
+  const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+    </body>
+</html>
